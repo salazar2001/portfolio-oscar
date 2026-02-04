@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "contact": "Contato"
+  },
+  "hero": {
+    "eyebrow": "Engenheiro Backend | Sistemas & Confiabilidade",
+    "headline": "Oscar cria backends rápidos e confiáveis que escalam.",
+    "subhead": "Eu desenho APIs, pipelines e sistemas distribuídos que mantêm os dados consistentes, clientes satisfeitos e times entregando sem medo.",
+    "ctaPrimary": "Ver projetos principais",
+    "ctaSecondary": "Vamos construir juntos",
+    "stats": [
+      { "number": "12+", "label": "Sistemas backend entregues" },
+      { "number": "9B+", "label": "Eventos processados por dia" },
+      { "number": "99,98%", "label": "Maior marco de uptime" }
+    ],
+    "focusTitle": "Foco atual",
+    "focusList": [
+      "Fluxos distribuídos e filas",
+      "Observabilidade nível fintech",
+      "Otimização de latência e custo"
+    ],
+    "focusStatus": "Disponível para freelance e full-time"
+  },
+  "projects": {
+    "title": "Top 5 Projetos Backend",
+    "subtitle": "Sistemas que movem dinheiro, dados e decisões.",
+    "watchDemo": "Ver demo",
+    "links": {
+      "github": "GitHub",
+      "youtube": "YouTube"
+    },
+    "items": [
+      {
+        "name": "The Coastal Project - SaaS de Controle de Tempo",
+        "description": "Construi um backend confiável para controle de tempo, exportação de faturas e isolamento seguro de dados para um cliente de aluguel de curto/longo prazo.",
+        "summary": "Entreguei a arquitetura e implementação de um SaaS escalável usado por um cliente de aluguel de curto/longo prazo em San Diego, CA.",
+        "impact": "Reduzi o tempo de reconciliação em 92% e disputas de chargeback em 36%.",
+        "stack": ["Node.js", "PostgreSQL", "Kafka", "Redis"],
+        "highlights": ["Processadores idempotentes", "Padrão outbox", "Trilhas prontas para auditoria"],
+        "github": "https://github.com/",
+        "youtube": "https://www.youtube.com/",
+        "thumb": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "name": "PulseQueue",
+        "description": "Desenhei um agendador multi-tenant que prioriza cargas, lida com retries e protege serviços downstream.",
+        "summary": "Agendador multi-tenant com filas de prioridade dinâmica, retries e circuit breakers para workloads críticos.",
+        "impact": "Sustentou 180 mil jobs/min com SLA de entrega de 99,98%.",
+        "stack": ["Go", "NATS", "MongoDB", "Prometheus"],
+        "highlights": ["Controle de backpressure", "Cotas por tenant", "Retries adaptativos"],
+        "github": "https://github.com/",
+        "youtube": "https://www.youtube.com/",
+        "thumb": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "name": "Atlas Identity",
+        "description": "Implementei um sistema zero-trust com acesso por políticas, introspecção de tokens e rotação de chaves.",
+        "summary": "Serviço de autenticação zero-trust com introspecção de tokens, rotação de chaves e controle por políticas.",
+        "impact": "Reduzi a latência de auth em 41% atendendo 12M de usuários/mês.",
+        "stack": ["Java", "Spring Boot", "PostgreSQL", "Vault"],
+        "highlights": ["JWT hardening", "Policy engine", "Rotação de segredos"],
+        "github": "https://github.com/",
+        "youtube": "https://www.youtube.com/",
+        "thumb": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "name": "SignalWirehouse",
+        "description": "Entreguei um pipeline ETL streaming que transforma telemetria IoT em tabelas analíticas com gates rígidos de qualidade.",
+        "summary": "Pipeline ETL streaming que transforma telemetria IoT em tabelas prontas para analytics em tempo quase real.",
+        "impact": "Atualizações com 5 minutos de atraso em 9B de eventos diários.",
+        "stack": ["Python", "Flink", "BigQuery", "Airflow"],
+        "highlights": ["Evolução de schema", "Tratamento de dados tardios", "Gates de qualidade de dados"],
+        "github": "https://github.com/",
+        "youtube": "https://www.youtube.com/",
+        "thumb": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "name": "ForgePay Core",
+        "description": "Criei uma camada de orquestração de pagamentos com score antifraude, failover de provedores e relatórios de liquidação.",
+        "summary": "Camada de orquestração de pagamentos com score antifraude, failover e relatórios de liquidação.",
+        "impact": "Aumentei a taxa de sucesso de pagamentos em 8,7% em três regiões.",
+        "stack": [".NET", "SQL Server", "Azure Service Bus", "Elastic"],
+        "highlights": ["Roteamento com failover", "Rules engine", "Compliance PCI"],
+        "github": "https://github.com/",
+        "youtube": "https://www.youtube.com/",
+        "thumb": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
+      }
+    ]
+  },
+  "skills": {
+    "title": "O que eu entrego",
+    "subtitle": "Excelência backend, da arquitetura à resiliência on-call.",
+    "items": [
+      {
+        "title": "Arquitetura",
+        "body": "APIs orientadas ao domínio, limites de serviços e sistemas evolutivos."
+      },
+      {
+        "title": "Confiabilidade",
+        "body": "SLOs, testes de caos e playbooks de incidentes que funcionam."
+      },
+      {
+        "title": "Sistemas de dados",
+        "body": "Streaming, data warehousing e automação de pipelines em tempo real."
+      },
+      {
+        "title": "Segurança",
+        "body": "Modelagem de ameaças, logs de compliance e governança de segredos."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Precisa de um backend que não pisca?",
+    "body": "Compartilhe seu roadmap e eu entrego um plano em 48 horas. Posso entrar na arquitetura, entrega ou construção completa.",
+    "primary": "Fale comigo",
+    "secondary": "LinkedIn"
+  },
+  "footer": {
+    "left": "Oscar | Engenheiro Backend",
+    "right": "Baseado nos EUA | Disponível globalmente"
+  }
+}

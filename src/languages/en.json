@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Software Engineer | Systems & Reliability",
+    "headline": "Oscar builds fast, reliable backends that scale.",
+    "subhead": "I design APIs, pipelines, and distributed systems that keep data consistent, customers happy, and teams shipping without fear.",
+    "ctaPrimary": "View top projects",
+    "ctaSecondary": "Let's build together",
+    "stats": [
+      { "number": "12+", "label": "Backend systems shipped" },
+      { "number": "9B+", "label": "Events processed daily" },
+      { "number": "99.98%", "label": "Largest uptime milestone" }
+    ],
+    "focusTitle": "Current focus",
+    "focusList": [
+      "Distributed workflows and queues",
+      "Fintech-grade observability",
+      "Latency & cost optimization"
+    ],
+    "focusStatus": "Open for freelance & full-time"
+  },
+  "projects": {
+    "title": "Top 5 Backend Projects",
+    "subtitle": "Systems that move money, data, and decisions.",
+    "watchDemo": "Watch demo",
+    "links": {
+      "github": "GitHub",
+      "youtube": "YouTube"
+    },
+    "items": [
+      {
+        "name": "The Coastal Project - Time Tracking SaaS",
+        "description": "Built a reliable backend for time tracking, invoicing exports, and secure tenant data isolation for a short/long term rentals client.",
+        "summary": "Provided the backend architecture and implementation for a scalable time tracking SaaS used by a short/long term rentals client in San Diego, CA.",
+        "impact": "Cut reconciliation time by 92% and reduced chargeback disputes by 36%.",
+        "stack": ["Node.js", "PostgreSQL", "Kafka", "Redis"],
+        "highlights": ["Idempotent processors", "Outbox pattern", "Audit-ready trails"],
+        "github": "https://github.com/",
+        "youtube": "https://www.youtube.com/",
+        "thumb": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "name": "PulseQueue",
+        "description": "Designed a multi-tenant scheduler that prioritizes workloads, handles retries, and shields downstream services.",
+        "summary": "Multi-tenant job scheduler with dynamic priority lanes, retries, and circuit breakers for critical workloads.",
+        "impact": "Sustained 180k jobs/min with 99.98% delivery SLA.",
+        "stack": ["Go", "NATS", "MongoDB", "Prometheus"],
+        "highlights": ["Backpressure control", "Per-tenant quotas", "Adaptive retries"],
+        "github": "https://github.com/",
+        "youtube": "https://www.youtube.com/",
+        "thumb": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "name": "Atlas Identity",
+        "description": "Implemented a zero-trust auth system with policy-driven access control, token introspection, and rotating keys.",
+        "summary": "Zero-trust auth service with token introspection, rotating keys, and policy-based access control.",
+        "impact": "Reduced auth latency by 41% while supporting 12M monthly users.",
+        "stack": ["Java", "Spring Boot", "PostgreSQL", "Vault"],
+        "highlights": ["JWT hardening", "Policy engine", "Secrets rotation"],
+        "github": "https://github.com/",
+        "youtube": "https://www.youtube.com/",
+        "thumb": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "name": "SignalWirehouse",
+        "description": "Shipped a streaming ETL pipeline that transforms IoT telemetry into analytics-ready tables with strict data quality gates.",
+        "summary": "Streaming ETL pipeline that transforms IoT telemetry into analytics-ready tables in near real time.",
+        "impact": "Delivered 5-minute freshness across 9B daily events.",
+        "stack": ["Python", "Flink", "BigQuery", "Airflow"],
+        "highlights": ["Schema evolution", "Late-data handling", "Data quality gates"],
+        "github": "https://github.com/",
+        "youtube": "https://www.youtube.com/",
+        "thumb": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        "name": "ForgePay Core",
+        "description": "Built a payments orchestration layer with fraud scoring, provider failover, and settlement reporting.",
+        "summary": "Payments orchestration layer with fraud scoring, provider failover, and settlement reporting.",
+        "impact": "Improved payment success rate by 8.7% across three regions.",
+        "stack": [".NET", "SQL Server", "Azure Service Bus", "Elastic"],
+        "highlights": ["Failover routing", "Rules engine", "PCI compliance"],
+        "github": "https://github.com/",
+        "youtube": "https://www.youtube.com/",
+        "thumb": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
+      }
+    ]
+  },
+  "skills": {
+    "title": "What I bring",
+    "subtitle": "Backend craft, from architecture to on-call resilience.",
+    "items": [
+      {
+        "title": "Architecture",
+        "body": "Domain-driven APIs, service boundaries, and evolutionary systems."
+      },
+      {
+        "title": "Reliability",
+        "body": "SLOs, chaos testing, and incident response playbooks that stick."
+      },
+      {
+        "title": "Data Systems",
+        "body": "Streaming, warehousing, and pipeline automation for real-time intel."
+      },
+      {
+        "title": "Security",
+        "body": "Threat modeling, compliance-driven logging, and secrets governance."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Need a backend that won't blink?",
+    "body": "Share your roadmap and I'll outline a plan in 48 hours. I can jump in on architecture, delivery, or a full build.",
+    "primary": "Email me",
+    "secondary": "LinkedIn"
+  },
+  "footer": {
+    "left": "Oscar | Backend Engineer",
+    "right": "Based in the U.S. | Available worldwide"
+  }
+}
