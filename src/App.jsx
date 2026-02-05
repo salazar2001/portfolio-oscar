@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import meImg from './assets/1670471219173.jpg'
 import mobileAppThumb from './assets/active-system-photos.png'
+import tcpThumb from './assets/TCP-Time-Management.png'
 
 function App() {
   const { t, i18n } = useTranslation()
@@ -40,6 +41,12 @@ function App() {
   const openProject = (project) => {
     setSelectedProject(project)
     setModalOpen(true)
+  }
+
+  const getProjectThumb = (project) => {
+    if (project.name.includes('Mobile App')) return mobileAppThumb
+    if (project.name.includes('Coastal')) return tcpThumb
+    return project.thumb
   }
 
   const closeModal = () => {
@@ -145,7 +152,7 @@ function App() {
             <article key={project.name} className="project-card" onClick={() => openProject(project)}>
               <div className="project-media">
                 <img
-                  src={project.name.includes('Mobile App') ? mobileAppThumb : project.thumb}
+                  src={getProjectThumb(project)}
                   alt={`${project.name} preview`}
                   loading="lazy"
                 />
@@ -174,7 +181,7 @@ function App() {
             <div className="modal-content">
               <div className="modal-media">
                 <img
-                  src={selectedProject.name.includes('Mobile App') ? mobileAppThumb : selectedProject.thumb}
+                  src={getProjectThumb(selectedProject)}
                   alt={`${selectedProject.name} preview`}
                 />
               </div>
