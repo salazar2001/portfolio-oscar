@@ -6,6 +6,8 @@ import meImg from './assets/1670471219173.jpg'
 function App() {
   const { t, i18n } = useTranslation()
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
+  const [selectedProject, setSelectedProject] = useState(null)
+  const [modalOpen, setModalOpen] = useState(false)
   const currentLanguage = i18n.resolvedLanguage || i18n.language
   const stats = t('hero.stats', { returnObjects: true })
   const focusList = t('hero.focusList', { returnObjects: true })
@@ -21,7 +23,28 @@ function App() {
     }
   }, [theme])
 
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape' && modalOpen) {
+        setModalOpen(false)
+        setSelectedProject(null)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [modalOpen])
+
   const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
+
+  const openProject = (project) => {
+    setSelectedProject(project)
+    setModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setModalOpen(false)
+    setSelectedProject(null)
+  }
 
   return (
     <div className="page">
@@ -118,46 +141,56 @@ function App() {
         </div>
         <div className="project-grid">
           {projects.map((project) => (
-            <article key={project.name} className="project-card">
+            <article key={project.name} className="project-card" onClick={() => openProject(project)}>
               <div className="project-media">
                 <img src={project.thumb} alt={`${project.name} preview`} loading="lazy" />
-                <a
-                  className="project-play"
-                  href={project.youtube}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {t('projects.watchDemo')}
-                </a>
               </div>
               <div className="project-head">
                 <h3>{project.name}</h3>
                 <span className="project-impact">{project.impact}</span>
               </div>
-              <p className="project-description">{project.description}</p>
-              <p className="project-summary">{project.summary}</p>
               <div className="project-tags">
                 {project.stack.map((tech) => (
                   <span key={tech}>{tech}</span>
                 ))}
               </div>
-              <ul className="project-highlights">
-                {project.highlights.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-              <div className="project-links">
-                <a href={project.github} target="_blank" rel="noreferrer" aria-label={`View ${project.name} on GitHub - Opens in new tab`}>
-                  {t('projects.links.github')}
-                </a>
-                <a href={project.youtube} target="_blank" rel="noreferrer" aria-label={`Watch ${project.name} demo on YouTube - Opens in new tab`}>
-                  {t('projects.links.youtube')}
-                </a>
-              </div>
+              <button className="project-more" type="button" onClick={() => openProject(project)}>
+                {t('projects.seeMore', 'See more')}
+              </button>
             </article>
           ))}
         </div>
       </section>
+
+      {modalOpen && selectedProject && (
+        <div className="modal-overlay" role="presentation" onClick={closeModal}>
+          <div className="modal" role="dialog" aria-modal="true" aria-label={`${selectedProject.name} details`} onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeModal} aria-label="Close details">×</button>
+            <div className="modal-content">
+              <div className="modal-media">
+                <img src={selectedProject.thumb} alt={`${selectedProject.name} preview`} />
+              </div>
+              <div className="modal-body">
+                <h3>{selectedProject.name}</h3>
+                <p className="modal-impact">{selectedProject.impact}</p>
+                <p>{selectedProject.description}</p>
+                <p className="modal-summary">{selectedProject.summary}</p>
+                <div className="modal-stack">
+                  {selectedProject.stack.map((s) => (
+                    <span key={s} className="tag">{s}</span>
+                  ))}
+                </div>
+                <h4 className="modal-section-title">{t('projects.highlightsTitle', 'Key takeaways')}</h4>
+                <ul className="modal-highlights">
+                  {selectedProject.highlights.map((h) => (
+                    <li key={h}>{h}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <section id="skills" className="section skills">
         <div className="section-title">

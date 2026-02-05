@@ -6,7 +6,7 @@
   },
   "hero": {
     "eyebrow": "Software Developer",
-    "headline": "Oscar Salazar",
+    "headline": "Hey I'm Oscar Salazar",
     "subhead": "I design APIs, pipelines, and distributed systems that keep data consistent, and customers happy.",
     "ctaPrimary": "View top projects",
     "ctaSecondary": "Technical skills",
@@ -23,32 +23,64 @@
     "title": "Top 5 Backend Projects",
     "subtitle": "Systems that move money, data, and decisions.",
     "watchDemo": "Watch demo",
+    "seeMore": "See more",
+    "highlightsTitle": "Key takeaways",
     "links": {
       "github": "GitHub",
       "youtube": "YouTube"
     },
     "items": [
       {
-        "name": "The Coastal Project - Time Tracking SaaS",
-        "description": "Built a reliable backend for time tracking, invoicing exports, and secure tenant data isolation for a short/long term rentals client.",
-        "summary": "Provided the backend architecture and implementation for a scalable time tracking SaaS used by a short/long term rentals client in San Diego, CA.",
-        "impact": "Cut reconciliation time by 92% and reduced chargeback disputes by 36%.",
-        "stack": ["Node.js", "PostgreSQL", "Kafka", "Redis"],
-        "highlights": ["Idempotent processors", "Outbox pattern", "Audit-ready trails"],
+        "name": "The Coastal Project – Time Tracking & Payroll System",
+        "description": "Custom-built time tracking and payroll management system developed for a short-term rental company in the United States to replace an existing third-party solution.",
+        "summary": "Designed and implemented a custom time tracking platform to replace a third-party system, providing better control over employee hours, payroll processing, and operational reporting for a short-term rental company.",
+        "impact": "Centralized employee time and payroll data, reduced manual payroll processing, and lowered annual software subscription costs by approximately 60%, generating significant operational savings.",
+        "stack": [
+          "JavaScript",
+          "TypeScript",
+          "Java",
+          "Node.js",
+          "React",
+          "PostgreSQL",
+          "DigitalOcean"
+        ],
+        "highlights": [
+          "Employee time tracking and shift logging",
+          "Payroll receipts and employee payment management",
+          "Worker hours and payroll reporting",
+          "Replacement of a third-party time tracking system",
+          "Backend APIs for time, payroll, and reporting modules",
+          "Reduced dependency on external SaaS tools"
+        ],
         "github": "https://github.com/",
         "youtube": "https://www.youtube.com/",
         "thumb": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
       },
       {
-        "name": "PulseQueue",
-        "description": "Designed a multi-tenant scheduler that prioritizes workloads, handles retries, and shields downstream services.",
-        "summary": "Multi-tenant job scheduler with dynamic priority lanes, retries, and circuit breakers for critical workloads.",
-        "impact": "Sustained 180k jobs/min with 99.98% delivery SLA.",
-        "stack": ["Go", "NATS", "MongoDB", "Prometheus"],
-        "highlights": ["Backpressure control", "Per-tenant quotas", "Adaptive retries"],
+        "name": "Mobile App – Institutional Asset Management",
+        "description": "Full-stack mobile application developed to manage, identify, and track institutional assets using mobile devices.",
+        "summary": "Designed and implemented a full-stack Android mobile application to manage institutional assets, allowing users to authenticate securely, identify assets using the mobile device, and synchronize data with a backend system.",
+        "impact": "Improved asset visibility and control by enabling real-time asset identification, offline data access, and centralized synchronization with backend services.",
+        "stack": [
+          "Flutter",
+          "Dart",
+          "REST APIs",
+          "JWT Authentication",
+          "SQLite",
+          "DigitalOcean"
+        ],
+        "highlights": [
+          "Asset listing and location tracking",
+          "JWT-based authentication and authorization",
+          "Mobile device used as an asset identification reader",
+          "Offline data storage using SQLite",
+          "Data synchronization with backend via REST APIs",
+          "Production deployment on DigitalOcean",
+          "End-to-end full-stack implementation"
+        ],
         "github": "https://github.com/",
         "youtube": "https://www.youtube.com/",
-        "thumb": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+        "thumb": "https://images.unsplash.com/photo-1581092334394-9c2a44b7e3f1?auto=format&fit=crop&w=900&q=80"
       },
       {
         "name": "Atlas Identity",

@@ -319,6 +319,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
   animation: fade-up 700ms ease-out both;
 }
 
@@ -384,6 +385,33 @@ ul {
   border: 1px solid var(--border);
   font-size: 0.8rem;
   color: var(--tag-fg);
+}
+
+.project-more {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 200ms ease, transform 200ms ease, border-color 200ms ease;
+}
+
+.project-card:hover .project-more {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  border-color: #3a3a3a;
+}
+
+.project-card:hover {
+  border-color: #2b2b2b;
 }
 
 .project-highlights li {
@@ -513,4 +541,168 @@ html[data-theme="light"] {
   --btn-ghost-fg: #0b0b0b;
   --tag-bg: #f3f3f3;
   --tag-fg: #3a3a3a;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,10,0.6);
+  display: grid;
+  place-items: center;
+  z-index: 60;
+  padding: 1.5rem;
+  animation: overlay-fade 220ms ease-out both;
+}
+
+.modal {
+  width: min(920px, 96%);
+  max-height: 92vh;
+  overflow: auto;
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.4rem;
+  box-shadow: 0 20px 60px rgba(2,6,10,0.6);
+  position: relative;
+  animation: modal-pop 240ms ease-out both;
+}
+
+.modal-close {
+  position: absolute;
+  right: 0.6rem;
+  top: 0.4rem;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.modal-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.modal-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.modal-body h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.5rem;
+}
+
+.modal-impact {
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0 0 0.9rem 0;
+}
+
+.modal-body p {
+  color: #d8d8d8;
+  line-height: 1.55;
+  margin: 0 0 0.75rem 0;
+}
+
+.modal-summary {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.modal-stack {
+  margin: 0.4rem 0 0.8rem;
+}
+
+.modal-section-title {
+  margin: 0.4rem 0 0.35rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.modal-stack .tag {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  color: var(--tag-fg);
+  font-size: 0.8rem;
+}
+
+.modal-highlights {
+  margin: 0.6rem 0 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.modal-highlights li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.modal-highlights li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: #6c6c6c;
+}
+
+.modal-links {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.modal-links a {
+  padding-bottom: 0.15rem;
+  border-bottom: 1px solid transparent;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.modal-links a:hover {
+  color: var(--ink);
+  border-color: #3a3a3a;
+}
+
+@keyframes overlay-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-pop {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 720px) {
+  .modal-content {
+    grid-template-columns: 1fr;
+  }
 }
