@@ -14,14 +14,14 @@
       { "number": "5+", "label": "Systems created to detail with specific client requirements" }    ],
     "focusTitle": "Current focus",
     "focusList": [
-      "Software as a Service (SaaS) applications",
-      "In-House applications",
-      "Networking design and implementation"
+      "SaaS application development",
+      "Internal tools and operational systems",
+      "Backend APIs and full-stack workflows"
     ]
   },
   "projects": {
     "title": "Some Projects",
-    "subtitle": "Systems that move money, data, and decisions.",
+    "subtitle": "Practical systems built for real business needs.",
     "seeMore": "See more",
     "highlightsTitle": "Key takeaways",
     "links": {

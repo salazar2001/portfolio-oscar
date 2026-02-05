@@ -4,6 +4,7 @@ import './App.css'
 import meImg from './assets/1670471219173.jpg'
 import mobileAppThumb from './assets/active-system-photos.png'
 import tcpThumb from './assets/TCP-Time-Management.png'
+import peterStoneThumb from './assets/peterstonecomp-site.png'
 
 function App() {
   const { t, i18n } = useTranslation()
@@ -46,6 +47,7 @@ function App() {
   const getProjectThumb = (project) => {
     if (project.name.includes('Mobile App')) return mobileAppThumb
     if (project.name.includes('Coastal')) return tcpThumb
+    if (project.name.includes('Peter Stone')) return peterStoneThumb
     return project.thumb
   }
 
