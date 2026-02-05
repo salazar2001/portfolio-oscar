@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
 import './App.css'
 import meImg from './assets/1670471219173.jpg'
+import mobileAppThumb from './assets/active-system-photos.png'
 
 function App() {
   const { t, i18n } = useTranslation()
@@ -143,7 +144,11 @@ function App() {
           {projects.map((project) => (
             <article key={project.name} className="project-card" onClick={() => openProject(project)}>
               <div className="project-media">
-                <img src={project.thumb} alt={`${project.name} preview`} loading="lazy" />
+                <img
+                  src={project.name.includes('Mobile App') ? mobileAppThumb : project.thumb}
+                  alt={`${project.name} preview`}
+                  loading="lazy"
+                />
               </div>
               <div className="project-head">
                 <h3>{project.name}</h3>
@@ -168,7 +173,10 @@ function App() {
             <button className="modal-close" onClick={closeModal} aria-label="Close details">×</button>
             <div className="modal-content">
               <div className="modal-media">
-                <img src={selectedProject.thumb} alt={`${selectedProject.name} preview`} />
+                <img
+                  src={selectedProject.name.includes('Mobile App') ? mobileAppThumb : selectedProject.thumb}
+                  alt={`${selectedProject.name} preview`}
+                />
               </div>
               <div className="modal-body">
                 <h3>{selectedProject.name}</h3>
@@ -201,7 +209,15 @@ function App() {
           {skills.map((skill) => (
             <div key={skill.title} className="skill-card">
               <h3>{skill.title}</h3>
-              <p>{skill.body}</p>
+              <ul className="skill-list">
+                {skill.body
+                  .split('\n')
+                  .map((line) => line.trim())
+                  .filter(Boolean)
+                  .map((line) => (
+                    <li key={line}>{line.replace(/^•\s*/, '')}</li>
+                  ))}
+              </ul>
             </div>
           ))}
         </div>

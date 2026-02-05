@@ -7,8 +7,8 @@
   "hero": {
     "eyebrow": "Software Developer",
     "headline": "Hey I'm Oscar Salazar",
-    "subhead": "I design APIs, pipelines, and distributed systems that keep data consistent, and customers happy.",
-    "ctaPrimary": "View top projects",
+    "subhead": "I’m a full-stack developer with experience working on backend services, web applications, and supporting tools. I enjoy building practical solutions, writing clean and understandable code, and learning through real projects. I’m interested in growing as a developer while contributing to systems that support real business needs.",
+    "ctaPrimary": "View projects",
     "ctaSecondary": "Technical skills",
     "stats": [
       { "number": "5+", "label": "Systems created to detail with specific client requirements" }    ],
@@ -83,70 +83,62 @@
         "thumb": "https://images.unsplash.com/photo-1581092334394-9c2a44b7e3f1?auto=format&fit=crop&w=900&q=80"
       },
       {
-        "name": "Atlas Identity",
-        "description": "Implemented a zero-trust auth system with policy-driven access control, token introspection, and rotating keys.",
-        "summary": "Zero-trust auth service with token introspection, rotating keys, and policy-based access control.",
-        "impact": "Reduced auth latency by 41% while supporting 12M monthly users.",
-        "stack": ["Java", "Spring Boot", "PostgreSQL", "Vault"],
-        "highlights": ["JWT hardening", "Policy engine", "Secrets rotation"],
+        "name": "Peter Stone Company – Business Website Migration",
+        "description": "Custom business website developed for a handyman company in the United States, transitioning from a website builder platform to a fully custom-built solution.",
+        "summary": "Designed and built a detailed, custom website to replace a third-party website builder, giving the business full control over content, structure, and performance while better representing its services and brand.",
+        "impact": "Improved site performance, content flexibility, and long-term maintainability by removing dependency on a website builder and implementing a fully custom solution.",
+        "stack": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Responsive Design",
+          "SEO Best Practices"
+        ],
+        "highlights": [
+          "Migration from a website builder to a custom-built website",
+          "Fully responsive layout for desktop and mobile",
+          "Service-focused content structure tailored to the business",
+          "Performance and SEO-oriented implementation",
+          "Improved content control and maintainability",
+          "Close collaboration with the business owner"
+        ],
         "github": "https://github.com/",
         "youtube": "https://www.youtube.com/",
-        "thumb": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80"
-      },
-      {
-        "name": "SignalWirehouse",
-        "description": "Shipped a streaming ETL pipeline that transforms IoT telemetry into analytics-ready tables with strict data quality gates.",
-        "summary": "Streaming ETL pipeline that transforms IoT telemetry into analytics-ready tables in near real time.",
-        "impact": "Delivered 5-minute freshness across 9B daily events.",
-        "stack": ["Python", "Flink", "BigQuery", "Airflow"],
-        "highlights": ["Schema evolution", "Late-data handling", "Data quality gates"],
-        "github": "https://github.com/",
-        "youtube": "https://www.youtube.com/",
-        "thumb": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
-      },
-      {
-        "name": "ForgePay Core",
-        "description": "Built a payments orchestration layer with fraud scoring, provider failover, and settlement reporting.",
-        "summary": "Payments orchestration layer with fraud scoring, provider failover, and settlement reporting.",
-        "impact": "Improved payment success rate by 8.7% across three regions.",
-        "stack": [".NET", "SQL Server", "Azure Service Bus", "Elastic"],
-        "highlights": ["Failover routing", "Rules engine", "PCI compliance"],
-        "github": "https://github.com/",
-        "youtube": "https://www.youtube.com/",
-        "thumb": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
+        "thumb": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80"
       }
+
     ]
   },
   "skills": {
     "title": "What I bring",
-    "subtitle": "Backend craft, from architecture to on-call resilience.",
-    "items": [
-      {
-        "title": "Architecture",
-        "body": "Domain-driven APIs, service boundaries, and evolutionary systems."
-      },
-      {
-        "title": "Reliability",
-        "body": "SLOs, chaos testing, and incident response playbooks that stick."
-      },
-      {
-        "title": "Data Systems",
-        "body": "Streaming, warehousing, and pipeline automation for real-time intel."
-      },
-      {
-        "title": "Security",
-        "body": "Threat modeling, compliance-driven logging, and secrets governance."
-      }
-    ]
-  },
+      "subtitle": "Hands-on full-stack development across backend, frontend, tools, and infrastructure.",
+      "items": [
+        {
+          "title": "Backend",
+          "body": "• REST API development with Node.js and Java    \n• Business logic and data modeling\n• JWT-based authentication and authorization\n• PostgreSQL schema design and queries"
+        },
+        {
+          "title": "Frontend",
+          "body": "• Responsive UI development with React\n• Modern JavaScript and TypeScript\n• Component-based architecture\n• Usability-focused layouts and interactions"
+        },
+        {
+          "title": "Tools",
+          "body": "• Proficient in using AI-powered development tools to improve productivity, debugging, and code quality\n• API consumption and data synchronization\n• Version control with Git and GitHub\n• Collaborative development workflows and code reviews"
+        },
+        {
+          "title": "Infrastructure",
+          "body": "• Cloud deployment on DigitalOcean\n• Backend service hosting and configuration\n• Environment-based application setup\n• Basic CI and deployment workflows"
+        }
+      ]
+    },
   "contact": {
-    "title": "Need a backend that won't blink?",
-    "body": "Share your roadmap and I'll outline a plan in 48 hours. I can jump in on architecture, delivery, or a full build.",
-    "primary": "Email me",
-    "secondary": "LinkedIn"
+  "title": "Get in touch",
+  "body": "Feel free to reach out. I’m always interested in learning and growing through new experiences.",
+  "primary": "Email me",
+  "secondary": "LinkedIn"
   },
   "footer": {
     "left": "Oscar | Software Developer",
-    "right": "Based in Gueatemala | Available worldwide"
+    "right": "Based in Guatemala | Available worldwide"
   }
 }
