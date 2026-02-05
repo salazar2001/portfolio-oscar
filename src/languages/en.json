@@ -5,23 +5,19 @@
     "contact": "Contact"
   },
   "hero": {
-    "eyebrow": "Software Engineer | Systems & Reliability",
-    "headline": "Oscar builds fast, reliable backends that scale.",
-    "subhead": "I design APIs, pipelines, and distributed systems that keep data consistent, customers happy, and teams shipping without fear.",
+    "eyebrow": "Software Developer",
+    "headline": "Oscar Salazar",
+    "subhead": "I design APIs, pipelines, and distributed systems that keep data consistent, and customers happy.",
     "ctaPrimary": "View top projects",
-    "ctaSecondary": "Let's build together",
+    "ctaSecondary": "Technical skills",
     "stats": [
-      { "number": "12+", "label": "Backend systems shipped" },
-      { "number": "9B+", "label": "Events processed daily" },
-      { "number": "99.98%", "label": "Largest uptime milestone" }
-    ],
+      { "number": "5+", "label": "Systems created to detail with specific client requirements" }    ],
     "focusTitle": "Current focus",
     "focusList": [
-      "Distributed workflows and queues",
-      "Fintech-grade observability",
-      "Latency & cost optimization"
-    ],
-    "focusStatus": "Open for freelance & full-time"
+      "Software as a Service (SaaS) applications",
+      "In-House applications",
+      "Networking design and implementation"
+    ]
   },
   "projects": {
     "title": "Top 5 Backend Projects",
@@ -118,7 +114,7 @@
     "secondary": "LinkedIn"
   },
   "footer": {
-    "left": "Oscar | Backend Engineer",
-    "right": "Based in the U.S. | Available worldwide"
+    "left": "Oscar | Software Developer",
+    "right": "Based in Gueatemala | Available worldwide"
   }
 }

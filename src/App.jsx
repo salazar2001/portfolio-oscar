@@ -1,13 +1,27 @@
 import { useTranslation } from 'react-i18next'
+import { useEffect, useState } from 'react'
 import './App.css'
+import meImg from './assets/1670471219173.jpg'
 
 function App() {
   const { t, i18n } = useTranslation()
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
   const currentLanguage = i18n.resolvedLanguage || i18n.language
   const stats = t('hero.stats', { returnObjects: true })
   const focusList = t('hero.focusList', { returnObjects: true })
   const projects = t('projects.items', { returnObjects: true })
   const skills = t('skills.items', { returnObjects: true })
+
+  useEffect(() => {
+    try {
+      document.documentElement.setAttribute('data-theme', theme)
+      localStorage.setItem('theme', theme)
+    } catch (e) {
+      // ignore
+    }
+  }, [theme])
+
+  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
 
   return (
     <div className="page">
@@ -35,6 +49,31 @@ function App() {
               </button>
             ))}
           </div>
+          <button
+            className="theme-toggle"
+            type="button"
+            onClick={toggleTheme}
+            aria-pressed={theme === 'light'}
+            title={theme === 'dark' ? 'Activate light mode' : 'Activate dark mode'}
+          >
+            {theme === 'dark' ? (
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="theme-icon">
+                <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 13V2a6 6 0 1 1 0 12z" />
+              </svg>
+            ) : (
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="theme-icon">
+                <circle cx="8" cy="8" r="3" />
+                <line x1="8" y1="1" x2="8" y2="2" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="8" y1="14" x2="8" y2="15" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="1" y1="8" x2="2" y2="8" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="14" y1="8" x2="15" y2="8" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="2.93" y1="2.93" x2="3.64" y2="3.64" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="12.36" y1="12.36" x2="13.07" y2="13.07" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="13.07" y1="2.93" x2="12.36" y2="3.64" stroke="currentColor" strokeWidth="1.5" />
+                <line x1="3.64" y1="12.36" x2="2.93" y2="13.07" stroke="currentColor" strokeWidth="1.5" />
+              </svg>
+            )}
+          </button>
         </nav>
         <div className="hero-grid">
           <div className="hero-copy">
@@ -59,13 +98,15 @@ function App() {
             </div>
           </div>
           <div className="hero-card">
+            <div className="hero-photo" aria-hidden={false}>
+              <img src={meImg} alt={t('hero.photoAlt') || 'Oscar Salazar - Full Stack Developer'} />
+            </div>
             <h2>{t('hero.focusTitle')}</h2>
             <ul>
               {focusList.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <div className="status-pill">{t('hero.focusStatus')}</div>
           </div>
         </div>
       </header>
@@ -79,7 +120,7 @@ function App() {
           {projects.map((project) => (
             <article key={project.name} className="project-card">
               <div className="project-media">
-                <img src={project.thumb} alt={`${project.name} preview`} />
+                <img src={project.thumb} alt={`${project.name} preview`} loading="lazy" />
                 <a
                   className="project-play"
                   href={project.youtube}
@@ -106,10 +147,10 @@ function App() {
                 ))}
               </ul>
               <div className="project-links">
-                <a href={project.github} target="_blank" rel="noreferrer">
+                <a href={project.github} target="_blank" rel="noreferrer" aria-label={`View ${project.name} on GitHub - Opens in new tab`}>
                   {t('projects.links.github')}
                 </a>
-                <a href={project.youtube} target="_blank" rel="noreferrer">
+                <a href={project.youtube} target="_blank" rel="noreferrer" aria-label={`Watch ${project.name} demo on YouTube - Opens in new tab`}>
                   {t('projects.links.youtube')}
                 </a>
               </div>
